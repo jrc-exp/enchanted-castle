@@ -28,7 +28,7 @@ export default {
           px-4
         ">
         <div class="md:flex-1 mb-8 md:mb-0">
-          <img src="door.webp" class="rounded-lg shadow-lg" />
+          <img src="/door.webp" class="rounded-lg shadow-lg" />
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <pre>

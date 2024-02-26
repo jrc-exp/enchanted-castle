@@ -12,8 +12,7 @@ export default {
 <template>
   <div class="container mx-auto py-10" id="app">
     <article class="prose prose-lg max-w-none">
-      <div
-        class="
+      <div class="
           container
           mx-auto
           flex flex-col
@@ -22,10 +21,9 @@ export default {
           justify-between
           py-0
           px-4
-        "
-      >
+        ">
         <div class="md:flex-1 mb-8 md:mb-0">
-          <img src="girls_looking_castle.jpeg" class="rounded-lg shadow-lg" />
+          <img src="/girls_looking_castle.jpeg" class="rounded-lg shadow-lg" />
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <h1>Mystery of the Enchanted Castle</h1>

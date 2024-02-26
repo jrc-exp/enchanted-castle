@@ -28,7 +28,7 @@ export default {
           px-4
         ">
         <div class="md:flex-1 mb-8 md:mb-0">
-          <img src="party.webp" class="rounded-lg shadow-lg" />
+          <img src="/party.webp" class="rounded-lg shadow-lg" />
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <h1>Happy Birthday Addison!</h1>
