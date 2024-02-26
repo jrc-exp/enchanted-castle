@@ -11,6 +11,14 @@ export default {
       this.$router.push('/page5');
     },
   },
+  mounted() {
+    const audio = new Audio('/page6.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
+  },
 };
 </script>
 
@@ -33,6 +41,20 @@ export default {
         <div class="md:flex-1 text-center md:text-left">
           <h1>Happy Birthday Addison!</h1>
           <h2>The Animals are Free!</h2>
+          <pre>
+            Triumph resounds through the castle's hall,
+            Brave hearts have answered the silent call.
+            Happy Birthday, Addison, joyous and bright,
+            For the animals are free, thanks to your light.
+
+            Together, the girls achieved a noble feat,
+            With courage and love, no challenge could beat.
+            Now let the night in laughter be wrapped,
+            A slumber party awaits, in dreamscape mapped.
+
+            Celebrate, rejoice, under the moon's soft glow,
+            For the tales of this night, through ages will flow.
+          </pre>
         </div>
       </div>
       <div class="pb-20">

@@ -6,6 +6,14 @@ export default {
       this.$router.push('/page2');
     },
   },
+  mounted() {
+    const audio = new Audio('/intro_nova.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
+  },
 };
 </script>
 

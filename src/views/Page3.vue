@@ -11,6 +11,14 @@ export default {
       this.$router.push('/page2');
     },
   },
+  mounted() {
+    const audio = new Audio('/page3.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
+  },
 };
 </script>
 
@@ -32,16 +40,19 @@ export default {
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <pre>
-        Before you can proceed.
-        A Clue you will need.
-        Amongst the games,
-        You will find the key.
+            To advance on this quest, a key is in reach,
+            Within the realm of games, lies the Clue you seek.
+            Search amidst the play, where strategies entwine,
+            There the path unlocks, and fortunes align.
 
-        With this you can proceed.
-        Look high and look low,
-        Keep yourselves clean,
-        the animals must be freed!
-      </pre>
+            With key in hand, explore both high and low,
+            Purity's essence, the next step will show.
+            In the chamber of water, where cleansing flows free,
+            Beneath suds and bubbles, your next clue shall be.
+
+            So heed this advice, with care and with speed,
+            For the animals await, their freedom decreed.
+          </pre>
         </div>
       </div>
       <Lock answer="rescue" destination="page4" />

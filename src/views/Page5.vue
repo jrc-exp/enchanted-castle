@@ -11,6 +11,14 @@ export default {
       this.$router.push('/page4');
     },
   },
+  mounted() {
+    const audio = new Audio('/page5.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
+  },
 };
 </script>
 
@@ -32,7 +40,20 @@ export default {
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <pre>
-            Final Puzzle!
+            Through corridors and chambers, your journey led,
+            Where silent guardians once softly tread.
+            Each encounter, a whisper, a memory ensnared,
+            In ornaments worn, their secrets bared.
+
+            Not just a trinket, nor a simple band,
+            But a sequence unveiled, by a careful hand.
+            Look not for loud clamors or a glaring sign,
+            But the silent order, in a line divine.
+
+            As the path unwinds, so must you weave,
+            A tapestry of numbers, in what you believe.
+            The key lies not in a singular place,
+            But in the journey taken, a quiet embrace.
           </pre>
         </div>
       </div>

@@ -1,15 +1,23 @@
 <script>
-import Lock from '../components/Lock.vue';
+import WeightLock from '../components/WeightLock.vue';
 
 export default {
   name: 'Page4',
   components: {
-    Lock,
+    WeightLock,
   },
   methods: {
     goToPreviousPage() {
       this.$router.push('/page3');
     },
+  },
+  mounted() {
+    const audio = new Audio('/page4.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
   },
 };
 </script>
@@ -32,11 +40,24 @@ export default {
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <pre>
-            Training Room Puzzle!
+            Within the castle's might, where knights of old prepare,
+            Lies the training grounds, a challenge if you dare.
+            Strength and wit must merge, in harmony they play,
+            Numbers etched in iron, secrets to convey.
+
+            Seek the weights that whisper tales of old,
+            Their numbers hold the truth, in iron cold.
+            Each to its own shadow must you align,
+            A silent accord of balance and design.
+
+            This task before you, not merely of might,
+            But a dance of wisdom, in the ancient light.
+            Solve the enigma set, let the path unfold,
+            Advance with heart and courage, bold and bold.
           </pre>
         </div>
       </div>
-      <Lock answer="123456" destination="page5" />
+      <WeightLock answer="12345" destination="page5" />
       <div class="pb-20">
         <button class="btn" @click="goToPreviousPage">Go Back</button>
       </div>

@@ -1,19 +1,3 @@
-<script>
-import Lock from '../components/Lock.vue';
-
-export default {
-  name: 'Page2',
-  components: {
-    Lock,
-  },
-  methods: {
-    goToPreviousPage() {
-      this.$router.push('/');
-    },
-  },
-};
-</script>
-
 <template>
   <div class="container mx-auto py-20">
     <article>
@@ -32,26 +16,26 @@ export default {
         </div>
         <div class="md:flex-1 text-center md:text-left">
           <pre>
-        In a room where secrets linger and echoes hide,
-        A silent guardian awaits
-        inside. Encased within layers unseen,
-        A tale untold, a mystery keen.
+            In a room where secrets linger and echoes hide,
+            A silent guardian awaits
+            inside. Encased within layers unseen,
+            A tale untold, a mystery keen.
 
-        Floating whispers hold a clue,
-        Their silent song leads you through.
-        Seek their silence, break their seal,
-        In their heart, the path will reveal.
+            Floating whispers hold a clue,
+            Their silent song leads you through.
+            Seek their silence, break their seal,
+            In their heart, the path will reveal.
 
-        Gather the fragments, hidden well,
-        Their story, only time will tell.
-        Guided by the arc of light,
-        Arrange the whispers, end the night.
+            Gather the fragments, hidden well,
+            Their story, only time will tell.
+            Guided by the arc of light,
+            Arrange the whispers, end the night.
 
-        In this quest of shade and hue,
-        A silent plea, a rescue true.
-        Let the spectrum be your key,
-        To unlock the whispers, set the guardian free.
-      </pre>
+            In this quest of shade and hue,
+            A silent plea, a rescue true.
+            Let the spectrum be your key,
+            To unlock the whispers, set the guardian free.
+          </pre>
         </div>
       </div>
       <Lock answer="1234" destination="page3" />
@@ -61,3 +45,32 @@ export default {
     </article>
   </div>
 </template>
+
+<script>
+import Lock from '../components/Lock.vue';
+
+export default {
+  name: 'Page2',
+  data() {
+    return {
+      audio: null,
+    };
+  },
+  components: {
+    Lock,
+  },
+  methods: {
+    goToPreviousPage() {
+      this.$router.push('/');
+    },
+  },
+  mounted() {
+    const audio = new Audio('/page2.mp3');
+    this.audio = audio;
+    this.audio.play();
+  },
+  unmounted() {
+    this.audio.pause();
+  },
+};
+</script>
