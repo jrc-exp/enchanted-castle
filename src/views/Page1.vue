@@ -5,11 +5,20 @@ export default {
     goToNextPage() {
       this.$router.push('/page2');
     },
+    switch_audio() {
+      // if this.audio is playing, pause it
+      if (this.audio.paused) {
+        this.audio.play();
+      } else {
+        // pause and rewind to start
+        this.audio.pause();
+        this.audio.currentTime = 0;
+      }
+    }
   },
   mounted() {
     const audio = new Audio('/intro_nova.mp3');
     this.audio = audio;
-    this.audio.play();
   },
   unmounted() {
     this.audio.pause();
@@ -31,9 +40,9 @@ export default {
           px-4
         ">
         <div class="md:flex-1 mb-8 md:mb-0">
-          <img src="/girls_looking_castle.jpeg" class="rounded-lg shadow-lg" />
+          <img src="/girls_looking_castle.jpeg" class="rounded-lg shadow-lg" @click="switch_audio" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <h1>Mystery of the Enchanted Castle</h1>
           <h2>Animal Rescue</h2>
         </div>

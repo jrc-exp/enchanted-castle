@@ -1,10 +1,10 @@
 <script>
-import WeightLock from '../components/WeightLock.vue';
+import Weights from '../components/Weights.vue';
 
 export default {
   name: 'Page4',
   components: {
-    WeightLock,
+    Weights,
   },
   methods: {
     goToPreviousPage() {
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto py-20">
+  <div class="container mx-auto py-10">
     <article>
       <div class="
           container
@@ -38,7 +38,7 @@ export default {
         <div class="md:flex-1 mb-8 md:mb-0">
           <img src="/training.webp" class="rounded-lg shadow-lg" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <pre>
             Within the castle's might, where knights of old prepare,
             Lies the training grounds, a challenge if you dare.
@@ -57,8 +57,11 @@ export default {
           </pre>
         </div>
       </div>
-      <WeightLock answer="12345" destination="page5" />
-      <div class="pb-20">
+      <div class="p-10 flex justify-center items-center h-full">
+        <!-- pass the javascript array [1, 2, 3, 5, 4] into the answer field, not a string-->
+        <Weights destination="page5" />
+      </div>
+      <div class="">
         <button class="btn" @click="goToPreviousPage">Go Back</button>
       </div>
     </article>

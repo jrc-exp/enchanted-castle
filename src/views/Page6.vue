@@ -38,7 +38,7 @@ export default {
         <div class="md:flex-1 mb-8 md:mb-0">
           <img src="/party.webp" class="rounded-lg shadow-lg" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <h1>Happy Birthday Addison!</h1>
           <h2>The Animals are Free!</h2>
           <pre>

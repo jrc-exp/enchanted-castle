@@ -38,7 +38,7 @@ export default {
         <div class="md:flex-1 mb-8 md:mb-0">
           <img src="/door.webp" class="rounded-lg shadow-lg" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <pre>
             Through corridors and chambers, your journey led,
             Where silent guardians once softly tread.
@@ -57,7 +57,7 @@ export default {
           </pre>
         </div>
       </div>
-      <Lock answer="PANDA" destination="page6" />
+      <Lock answer="PANDAS" destination="page6" />
       <div class="pb-20">
         <button class="btn" @click="goToPreviousPage">Go Back</button>
       </div>

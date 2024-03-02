@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto py-20">
+  <div class="container mx-auto py-10">
     <article>
       <div class="
           container
@@ -38,10 +38,10 @@ export default {
         <div class="md:flex-1 mb-8 md:mb-0">
           <img src="/bathroom.webp" class="rounded-lg shadow-lg" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <pre>
             To advance on this quest, a key is in reach,
-            Within the realm of games, lies the Clue you seek.
+            Within the realm of games, lies the <b>CLUE</b> you seek.
             Search amidst the play, where strategies entwine,
             There the path unlocks, and fortunes align.
 
@@ -56,7 +56,7 @@ export default {
         </div>
       </div>
       <Lock answer="rescue" destination="page4" />
-      <div class="pb-20">
+      <div class="pb-10">
         <button class="btn" @click="goToPreviousPage">Go Back</button>
       </div>
     </article>

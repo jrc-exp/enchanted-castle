@@ -14,7 +14,7 @@
         <div class="md:flex-1 mb-8 md:mb-0">
           <img src="/searching.webp" class="rounded-lg shadow-lg" />
         </div>
-        <div class="md:flex-1 text-center md:text-left">
+        <div class="md:flex-1 text-center md:text-left ml-10">
           <pre>
             In a room where secrets linger and echoes hide,
             A silent guardian awaits
@@ -38,7 +38,7 @@
           </pre>
         </div>
       </div>
-      <Lock answer="1234" destination="page3" />
+      <Lock answer="9723" destination="page3" />
       <div class="pb-20">
         <button class="btn" @click="goToPreviousPage">Go Back</button>
       </div>
